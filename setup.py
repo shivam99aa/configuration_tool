@@ -14,5 +14,7 @@ setup(
         "console_scripts": [
             "configzz=configzz.main:main"
         ]
-    }
+    },
+    zip_safe=False,
+    python_requires=">=3.8",
 )
