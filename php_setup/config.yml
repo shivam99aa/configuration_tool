@@ -1,0 +1,4 @@
+log_level: INFO
+ssh:
+  username: foo
+  password: bar

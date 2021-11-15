@@ -1,0 +1,5 @@
+- name: 'personal'
+  fqdn: '54.167.59.56'
+  ssh:
+    username: root
+    password: ubuntu

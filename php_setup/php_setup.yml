@@ -1,0 +1,29 @@
+- package:
+    name:
+      - 'nginx'
+      - 'php-fpm'
+    state: present
+
+- file:
+    src: './php_setup/default.txt'
+    dest: '/etc/nginx/sites-available/default'
+    owner: root
+    group: root
+    mode: '0644'
+    state: present
+
+- file:
+    src: './php_setup/index.php'
+    dest: '/var/www/html/index.php'
+    owner: root
+    group: root
+    mode: '0644'
+    state: present
+
+- service:
+    name: nginx
+    state: restarted
+
+- service:
+    name: php7.2-fpm
+    state: restarted
