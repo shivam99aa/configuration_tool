@@ -132,7 +132,8 @@ def main():
             logger.error(f'Error occurred when running task {task}.\nError: {e}\nSkipping current host.')
             continue
         except InvalidSSHCommand as e:
-            logger.error(f'Error occurred executing SSH actions.\nError: {e}')
+            logger.error(f'Error occurred executing SSH actions.\nError: {e}\nSkipping current host.')
+            continue
         except Exception as e:
             logger.error(f'Error occurred when configuring hosts. {e}')
             sys.exit(1)

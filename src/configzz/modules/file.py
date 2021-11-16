@@ -184,6 +184,9 @@ class File:
 
         """
 
+        if file_config.get('state') not in ['present', 'absent']:
+            raise InvalidTaskConfiguration("File state can be present or absent only.")
+
         if 'dest' not in file_config:
             raise InvalidTaskConfiguration("Destination file is missing.")
 
