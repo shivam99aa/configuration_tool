@@ -1,6 +1,7 @@
 # Configuration Tool
 
 Basic configuration tool which can perform simple tasks on a debian based machine using SSH. This tool is inspired from Ansible.
+This tool is tested on Ubuntu 18.04 machine yet. It might not work on other linux flavors.
 
 ## Table of Contents
 
@@ -13,11 +14,15 @@ Basic configuration tool which can perform simple tasks on a debian based machin
 - `python` 
 - `pip`
 
+To install pip:
 ```
 sudo apt install python3-pip
+pip3 install --upgrade pip
 ```
+Make sure pip is upgraded to latest version.
 
 ### Installation Steps:
+Make sure you have adequate permissions to run these commands. Use `sudo` if user privileges needs to be upgraded.
 ```
 pip3 install -r requirements.txt
 python3 setup.py install
