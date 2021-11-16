@@ -13,11 +13,13 @@ class Inventory:
     """
 
     def __init__(self):
+
         """
 
         Init method creates inventory object.
 
         """
+
         self.logger = logging.getLogger(__name__)
 
     def read_inventory_file(self, inventory_file: str) -> dict:
